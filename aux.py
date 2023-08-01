@@ -376,7 +376,7 @@ def load_emsembles(path: str = './helpers/ensembles/', device: str = 'cpu'):
             model_conf_ = PreResNet20()
             model_ = model_conf_.base(
                 *model_conf_.args, num_classes=100, **model_conf_.kwargs)
-            model_.load_state_dict(torch.load(os.path.join(path, filename)))
+            model_.load_state_dict(torch.load(os.path.join(path, filename), map_location=device))
             model_ = model_.to(device)
             model_.eval()
             models.append(model_)

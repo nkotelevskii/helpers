@@ -76,17 +76,6 @@ nodeenv==1.8.0
 notebook_shim==0.2.3
 numpy==1.25.1
 -e git+https://github.com/stat-ml/NUQ.git@5169346e413a5d1e43a974710b639ebc74bb5ac3#egg=nuq
-nvidia-cublas-cu11==11.10.3.66
-nvidia-cuda-cupti-cu11==11.7.101
-nvidia-cuda-nvrtc-cu11==11.7.99
-nvidia-cuda-runtime-cu11==11.7.99
-nvidia-cudnn-cu11==8.5.0.96
-nvidia-cufft-cu11==10.9.0.58
-nvidia-curand-cu11==10.2.10.91
-nvidia-cusolver-cu11==11.4.0.1
-nvidia-cusparse-cu11==11.7.4.91
-nvidia-nccl-cu11==2.14.3
-nvidia-nvtx-cu11==11.7.91
 overrides==7.3.1
 packaging==23.1
 pandas==2.0.3

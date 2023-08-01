@@ -8,7 +8,7 @@ import numpy as np
 import torch.nn.functional as F
 from scipy.stats import entropy
 from sklearn.metrics import roc_auc_score
-from temperature_scaling.temperature_scaling import ModelWithTemperature
+from temperature_scaling import ModelWithTemperature
 from copy import deepcopy
 from tqdm.auto import tqdm
 from swa_gaussian.swag.posteriors import SWAG
@@ -383,12 +383,12 @@ def load_emsembles(path: str = './helpers/ensembles/', device: str = 'cpu'):
     return models
     
 
-def ensemble_calibration(ensemble, calloader):
+def ensemble_calibration(ensemble, calloader, device):
     calibrated_ensemble = []
     for model in ensemble:
         calibrated_model = ModelWithTemperature(deepcopy(model))
         calibrated_model.eval()
-        calibrated_model.set_temperature(calloader)
+        calibrated_model.set_temperature(calloader, device)
         calibrated_ensemble.append(deepcopy(calibrated_model))
     return calibrated_ensemble
 

@@ -75,7 +75,6 @@ networkx==3.1
 nodeenv==1.8.0
 notebook_shim==0.2.3
 numpy==1.25.1
--e git+https://github.com/stat-ml/NUQ.git@5169346e413a5d1e43a974710b639ebc74bb5ac3#egg=nuq
 overrides==7.3.1
 packaging==23.1
 pandas==2.0.3

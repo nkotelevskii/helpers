@@ -369,7 +369,7 @@ def compute_log_densities(model, dataloader, means, covs, device):
 ############################################################
 
 
-def load_emsembles(path: str = './helpers/ensembles/', device: str = 'cpu'):
+def load_ensembles(path: str = './helpers/ensembles/', device: str = 'cpu'):
     models = []
     for filename in os.listdir(path):
         if filename.endswith('.pth'):

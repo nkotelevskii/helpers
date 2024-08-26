@@ -35,7 +35,7 @@ class ModelWithTemperature(nn.Module):
         We're going to set it to optimize NLL.
         valid_loader (DataLoader): validation set loader
         """
-        if device != 'cpu':
+        if str(device) != 'cpu':
             self.cuda()
         nll_criterion = nn.CrossEntropyLoss().to(device)
         ece_criterion = _ECELoss()
